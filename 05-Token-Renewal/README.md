@@ -14,9 +14,13 @@ cd 05-Token-Renewal
 npm install
 ```
 
+## Configure an API
+
+In the management dashboard create a new and set the Token Expiration for Browser to 60 seconds.  Record the API's Audience to be used in the configuration variables.
+
 ## Set the Client ID, Domain, and API URL
 
-If you download the sample from the quickstart page, it will come pre-populated with the **client ID** and **domain** for your application. If you clone the repo directly from Github, rename the `auth0-variables.js.example` file to `auth0-variables.js` and provide the **client ID** and **domain** there. This file is located in `src/Auth/`.
+If you download the sample from the quickstart page, it will come pre-populated with the **client ID**, **domain**, and **audience** for your application. If you clone the repo directly from Github, rename the `auth0-variables.js.example` file to `auth0-variables.js` and provide the **client ID**, **domain**, and **audience** there. This file is located in `src/Auth/`.
 
 ## Set Up `Allowed Web Origins` in the dashboard
 
