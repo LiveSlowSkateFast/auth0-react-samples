@@ -110,6 +110,14 @@ export default class Auth {
     );
   }
 
+  checkSession() {
+    this.auth0.checkSession({},
+      (err, result) => {
+        err ? console.log(err) : this.setSession(result);
+      }
+    );
+  }
+
   scheduleRenewal() {
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     const delay = expiresAt - Date.now();

@@ -7,6 +7,10 @@ class App extends Component {
     this.props.history.replace(`/${route}`);
   }
 
+  checkSession() {
+    this.props.auth.checkSession();
+  }
+
   login() {
     this.props.auth.login();
   }
@@ -17,6 +21,10 @@ class App extends Component {
 
   renewToken() {
     this.props.auth.renewToken();
+  }
+
+  componentWillMount() {
+    this.checkSession()
   }
 
   render() {
