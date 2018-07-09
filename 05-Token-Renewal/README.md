@@ -26,6 +26,10 @@ If you download the sample from the quickstart page, it will come pre-populated 
 
 In order to make `checkSession` work, you need to add the URL where the authorization request originates from, to the Allowed Web Origins list of your Auth0 client in the Dashboard under your client's Settings.
 
+## Set Up `Logout Url` in the dashboard
+
+In order to make `global logout` work, you need to add the URL where the logout request will be redirected to, to the Allowed Logout Urls list of your Auth0 client in the Dashboard under your client's Settings.
+
 ## Run the Application
 
 The development server that comes with create-react-app can be used to serve the application.

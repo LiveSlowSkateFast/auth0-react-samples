@@ -3,4 +3,5 @@ export const AUTH_CONFIG = {
   clientId: '{CLIENT_ID}',
   callbackUrl: 'http://localhost:3000/callback',
   audience: 'https://basic-backend-express',
+  logoutUrl: 'http://localhost:3000/home',
 }

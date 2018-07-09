@@ -87,6 +87,11 @@ export default class Auth {
     clearTimeout(this.tokenRenewalTimeout);
     // navigate to the home route
     history.replace('/home');
+
+    this.auth0.logout({
+      returnTo: AUTH_CONFIG.logoutUrl,
+      client_id: AUTH_CONFIG.clientId,
+    })
   }
 
   isAuthenticated() {
@@ -103,6 +108,7 @@ export default class Auth {
           alert(
             `Could not get a new token (${err.error}: ${err.error_description}).`
           );
+          this.logout()
         } else {
           this.setSession(result);
           alert(`Successfully renewed auth!`);
